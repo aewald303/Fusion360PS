@@ -9,7 +9,7 @@
     Author: Austen Ewald
     Version: 1.2
     Date published: 04/10/2024
-    Put the Fusion admin install exe in the same folder as the scripts. 
+    Make sure the Fusion admin install exe and the UninstallFusion.ps1 are in the same folder as this script. 
     Only looks at the default installed directory of fusion360 when it is installed with the --globalinstall parameter 
     JSON files are saved to %Programdata%/Autodesk
     Change variables as needed below this section
