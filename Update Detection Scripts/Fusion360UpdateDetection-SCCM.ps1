@@ -2,7 +2,7 @@
 .SYNOPSIS
     Detects if Fusion360 is up to date for use with SCCM. 
 .DESCRIPTION
-    This script checks the locally installed version of Fusion 360 vs the most up to date version online then returns a boonlean. True for needs update and false for no update needed. 
+    This script checks the locally installed version of Fusion 360 vs the most up to date version online then returns a boolean. True for needs update and false for no update needed. 
     Intended for use with SCCM for a Detection script to be used with a remediation baseline to automatically update Fusion360 when an update is released. 
 .NOTES
     Author: Austen Ewald
