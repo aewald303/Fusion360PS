@@ -41,7 +41,7 @@ Remove-Item 'C:\Program Files\Autodesk\webdeploy' -Recurse -Force -Confirm:$fals
 Remove-Item 'C:\ProgramData\Autodesk\FusionVersion.JSON' -Force -Confirm:$false -ErrorAction SilentlyContinue
 Remove-Item 'C:\ProgramData\Autodesk\FusionVersionLatest.JSON' -Force -Confirm:$false -ErrorAction SilentlyContinue
 
-exit 0
+Exit 0
 
 
 
