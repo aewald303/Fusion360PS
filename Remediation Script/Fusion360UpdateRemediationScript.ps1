@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-    Updates Fusion360 when ran using streamer. 
+    Updates Fusion360 when run using streamer.exe. 
 .DESCRIPTION
-    This script updates Fusion360 when ran and create a file called LastUpdateCheck.Tag in the streamer directory with the date of the the last time the script ran sucessfully.
+    This script updates Fusion360 when run and creates a file called LastUpdateCheck.Tag in the streamer directory with the date of the last time the script ran successfully.
     Intended to be used as an Intune/SCCM remediation script
-    Updates the registry entry for Fusion360 created by my install script so the applicaiton shows up in Settings-Apps and in add/remove programs by default. Set $AddToProgramsList varible to $false if you don't want this. 
+    Updates the registry entry for Fusion360 created by my install script so the application shows up in Settings-Apps and in add/remove programs by default. Set $AddToProgramsList variable to $false if you don't want this. 
 .NOTES
     Author: Austen Ewald
     Version: 1.2
@@ -50,9 +50,9 @@ try {
         New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Fusion360' -Name 'QuietUninstallString' -Value "$StreamerDir\UninstallFusion.ps1" -PropertyType String -Force -ea SilentlyContinue;
         New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Fusion360' -Name 'URLInfoAbout' -Value 'https://www.autodesk.com/products/fusion-360/' -PropertyType String -Force -ea SilentlyContinue;
     }
-    exit 0
+    Exit 0
 }
 catch {
     $_
-    exit 1
+    Exit 1
 }
