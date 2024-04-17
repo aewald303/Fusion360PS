@@ -4,7 +4,7 @@
 .DESCRIPTION
     This script installs Fusion360 globally on the computer for all users.
     Outputs a log file to C:\Windows\Temp(Can be changed in the variable below this section)
-    Creates a registry entry for Fusion360 so the applicaiton shows up in Settings-Apps and in add/remove programs by default. Set $AddToProgramsList varible to $false if you don't want this. 
+    Creates a registry entry for Fusion360 so the application shows up in Settings-Apps and in add/remove programs by default. Set $AddToProgramsList variable to $false if you don't want this. 
 .NOTES
     Author: Austen Ewald
     Version: 1.2
@@ -64,5 +64,5 @@ if($AddToProgramsList){
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Fusion360' -Name 'QuietUninstallString' -Value "$StreamerDir\UninstallFusion.ps1" -PropertyType String -Force -ea SilentlyContinue;
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Fusion360' -Name 'URLInfoAbout' -Value 'https://www.autodesk.com/products/fusion-360/' -PropertyType String -Force -ea SilentlyContinue;
 }
-exit 0
+Exit 0
 
